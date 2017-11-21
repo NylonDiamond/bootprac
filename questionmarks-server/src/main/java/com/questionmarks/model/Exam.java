@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 
 @Data // bundles the features of @ToString, @EqualsAndHashCode, @Getter, @Setter and @RequiredArgsConstructor together.
 @Entity //mark this class as an entity that will be managed by JPA/Hibernate.
@@ -21,12 +22,12 @@ public class Exam {
     @NotNull
     private String description;
 
-//    @NotNull
-//    private LocalDateTime createdAt;
-//
-//    @NotNull
-//    private LocalDateTime editedAt;
-//
-//    @NotNull
-//    private boolean published;
+    @NotNull
+    private LocalDateTime createdAt;
+
+    @NotNull
+    private LocalDateTime editedAt;
+
+    @NotNull
+    private boolean published;
 }
