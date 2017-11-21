@@ -25,9 +25,12 @@ public class ExamRestController {
     }
 
     @GetMapping
-    public List<Exam> getExams() {
-        return examRepository.findAll();
+    public String getExams() {
+        return "It worked"
     }
+//    public List<Exam> getExams() {
+//        return examRepository.findAll();
+//    }
 
     @PostMapping
     public void newExam(@DTO(ExamCreationDTO.class) Exam exam) {
