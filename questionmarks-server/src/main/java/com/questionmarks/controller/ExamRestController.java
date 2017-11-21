@@ -18,11 +18,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/exams")
 public class ExamRestController {
-    private ExamRepository examRepository;
+//    private ExamRepository examRepository;
 
-    public ExamRestController(ExamRepository examRepository) {
-        this.examRepository = examRepository;
-    }
+//    public ExamRestController(ExamRepository examRepository) {
+//        this.examRepository = examRepository;
+//    }
 
     @GetMapping
     public String getExams() {
@@ -32,14 +32,14 @@ public class ExamRestController {
 //        return examRepository.findAll();
 //    }
 
-    @PostMapping
-    public void newExam(@DTO(ExamCreationDTO.class) Exam exam) {
-        examRepository.save(exam);
-    }
-
-    @PutMapping
-    @ResponseStatus(HttpStatus.OK)
-    public void editExam(@DTO(ExamUpdateDTO.class) Exam exam) {
-        examRepository.save(exam);
-    }
+//    @PostMapping
+//    public void newExam(@DTO(ExamCreationDTO.class) Exam exam) {
+//        examRepository.save(exam);
+//    }
+//
+//    @PutMapping
+//    @ResponseStatus(HttpStatus.OK)
+//    public void editExam(@DTO(ExamUpdateDTO.class) Exam exam) {
+//        examRepository.save(exam);
+//    }
 }
