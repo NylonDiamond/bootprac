@@ -16,6 +16,7 @@ public class ExamCreationDTO {
     @NotNull
     private String description;
 
+
     @JsonIgnore
     private final LocalDateTime createdAt = LocalDateTime.now();
 

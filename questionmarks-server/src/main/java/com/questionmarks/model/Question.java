@@ -18,8 +18,8 @@ public class Question {
     private long id;
 
     @NotNull
-    @ManyToOne
-    @JoinColumn(name = "exam_id")
+    @ManyToOne // indicates to JPA/Hibernate that Many questions can exist To One exam.
+    @JoinColumn(name = "exam_id")//indicates that there will be a column called exam_id, in the table that supports Question, to reference the exam that owns this question.
     private Exam exam;
 
     private long order;
