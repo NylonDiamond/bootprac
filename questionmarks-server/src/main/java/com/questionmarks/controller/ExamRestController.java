@@ -27,7 +27,7 @@ public class ExamRestController {
     @GetMapping
 //    public String getExams() {
 //        return "It worked"
-//    } 
+//    }
     public List<Exam> getExams() {
         return examRepository.findAll();
     }
