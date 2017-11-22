@@ -29,6 +29,9 @@ public class ExamRestController {
 //    public String getExams() {
 //        return "It worked"
 //    }
+
+//    curl -H "Content-Type:application/json" -X POST -d '{"title": "test", "description": "test", "createdAt": "2016-11-09T11:44:44.797", "editedAt": "2016-11-09T11:44:44.797", "published": true}' http://localhost:8080/exams
+//
     public List<Exam> getExams() {
         return examRepository.findAll();
     }

@@ -31,6 +31,7 @@ Vue.component('friend-component', {
 
 
 const app = new Vue({
+
     el: "#app",
 
     data: {
@@ -48,10 +49,15 @@ const app = new Vue({
         ]
     },
 
+    mounted(){ // fires when your app is attached to the DOM, before showing stuff, ajax here
+        console.log("mounted!");
+        fetch('http://localhost:8080/exams').then(response => response.json()).then((data) => console.log(data));
+    },
+
     template: `
             <div>
             <!--for loop-->
             <!--Take the friend object and pass it into this component 'v-bind:friend'-->
-               <friend-component v-for="friend in friends" v-bind:friend="friend"/>             
+               <friend-component v-for="item in friends" v-bind:friend="item"/>             
             </div>`
 });
