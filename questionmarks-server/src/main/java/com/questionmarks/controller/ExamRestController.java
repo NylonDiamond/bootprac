@@ -18,9 +18,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/exams")
 public class ExamRestController {
+
     private ExamRepository examRepository;
 
-    public ExamRestController(ExamRepository examRepository) {
+    public ExamRestController(ExamRepository examRepository) {//or use @Autowire above creation above
         this.examRepository = examRepository;
     }
 
